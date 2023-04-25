@@ -6,8 +6,7 @@ require 'encabezado.php';
     <div class="row justify-content-center text-center h-100 align-items-center">
         <div class="col-md-12">
             <a href="http://localhost:8070/crud_pasteleria/Page/pastel" class="btn"><img src="../assets/img/pasteles.png" alt="" height="300" ></a>
-            <a href="http://localhost:8070/crud_pasteleria/Page/ingrediente" class="btn"><img src="../assets/img/Ingredientes.png" alt="" height="300" ></a>
-            <a href="http://localhost:8070/crud_pasteleria/Page/pastel_ingrediente" class="btn"><img src="../assets/img/pastel_ingrediente.png" alt="" height="300" ></a>
+            <a href="http://localhost:8070/crud_pasteleria/Page/ingrediente" class="btn"><img src="../assets/img/Ingredientes.png" alt="" height="300" ></a>            
         </div>
     </div>
 </div>

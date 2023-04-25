@@ -1,6 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 /*ESTILOS GENERALES DEL CONTENT*/
+#table_search{    
+  background: rgb(236, 236, 236) !important; 
+  width: 100% !important; 
+  position: relative;
+}
+.content-table{
+  max-height: 150px;
+  overflow-y: visible;
+  overflow-x: hidden;
+  position: relative;
+}
+.content-search{
+  position: fixed;
+  width: 40%; 
+  
+}
+.content-table .pagination,.content-table .dataTables_info, .content-table .dataTables_filter, .content-table .dataTables_length{
+  display: none !important;
+}
+
 .btn-pas{
   background-color:#183e86;
   color: white;

@@ -10,5 +10,8 @@ Class Page extends Controlador{
     public function ingrediente(){
         $this->vista2('pag_ingredientes');
     }
+    public function pastel(){
+        $this->vista2('pag_pasteles');
+    }
 }
 ?>

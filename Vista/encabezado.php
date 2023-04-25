@@ -20,8 +20,7 @@
                 </li>
                 <li><a href="http://localhost:8070/crud_pasteleria/Page/inicio"><i class="fa-solid fa-house"></i><span class="nav-item-custom">Inicio</span></a></li>
                 <li><a href="http://localhost:8070/crud_pasteleria/Page/ingrediente"><i class="fa-solid fa-clipboard-list"></i><span class="nav-item-custom">Ingredientes</span></a></li>
-				<li><a href="http://localhost:8070/crud_pasteleria/Page/Pastel"><i class="fa-solid fa-cake-candles"></i><span class="nav-item-custom">Pastel</span></a></li>
-				<li><a href="http://localhost:8070/crud_pasteleria/Page/Pastel_ingrediente"><i class="fa-solid fa-rectangle-list"></i><span class="nav-item-custom">Pastel - ingrediente</span></a></li>
+				<li><a href="http://localhost:8070/crud_pasteleria/Page/pastel"><i class="fa-solid fa-cake-candles"></i><span class="nav-item-custom">Pastel</span></a></li>				
                 <li><a href="http://localhost:8070/crud_pasteleria" class="logout"><i class="fa-solid fa-right-from-bracket"></i><span class="nav-item-custom sp-logout">Cerrar sesión</span></a></li>
             </ul>
         </nav>
