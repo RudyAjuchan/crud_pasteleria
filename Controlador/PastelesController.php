@@ -5,15 +5,33 @@ class PastelesController extends Controlador{
     public function listar(){
         $consultas=$this->modelo('PastelesModel');
         $filas=$consultas->buscarPasteles();
-        echo json_encode($filas);
+
+        $i=0;
+        $data=[];
+        foreach($filas as $f){
+            $filas2 = $consultas->buscarIngredientes($f['id_pastel']);
+            $data[$i]=[
+                "id_pastel" => $filas[$i]['id_pastel'],
+                "nombre" => $filas[$i]['nombre'],
+                "descripcion" => $filas[$i]['descripcion'],
+                "preparado_por" => $filas[$i]['preparado_por'],
+                "fecha_creacion" => $filas[$i]['fecha_creacion'],
+                "fecha_vencimiento" => $filas[$i]['fecha_vencimiento'],
+                "ingredientes" => $filas2,
+
+            ];
+            $i++;
+        }
+
+        echo json_encode($data);
         return true;
-            
     }
 
     public function buscarIngredientes(){
         $consultas=$this->modelo('PastelesModel');
         $id_pastel=$_POST['id_pastel'];
         $filas=$consultas->buscarIngredientes($id_pastel);
+                
         echo json_encode($filas);
         return true;
             

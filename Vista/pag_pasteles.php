@@ -21,6 +21,7 @@ require 'encabezado.php';
                             <th>Preparado por</th>
                             <th>Fecha Creación</th>
                             <th>Fecha vencimiento</th>
+                            <th>Ingredientes</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>                    
@@ -32,6 +33,11 @@ require 'encabezado.php';
                             <td>{{ pastel.preparado_por }}</td>
                             <td>{{ pastel.fecha_creacion }}</td>
                             <td>{{ pastel.fecha_vencimiento }}</td>
+                            <td>
+                                <span v-for="(ingredienteG, i) in pastel.ingredientes" :key="ingredienteG.id_ingrediente">
+                                    {{ ingredienteG.nombre }} / 
+                                </span>
+                            </td>
                             <td>
                                 <button type="button" style="border:none; background-color: transparent;font-size: 1.2rem" @click="actualizarPastel(pastel)">
                                     <i class="fa-solid fa-user-pen"></i>
