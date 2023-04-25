@@ -1,0 +1,31 @@
+CREATE DATABASE pasteleria;
+
+USE pasteleria;
+
+CREATE TABLE pastel(
+id_pastel INT PRIMARY KEY AUTO_INCREMENT,
+nombre varchar(75) not null,
+descripcion varchar(150) not null,
+preparado_por varchar(100) not null,
+fecha_creacion date not null,
+fecha_vencimiento date not null
+);
+
+
+CREATE TABLE ingrediente(
+id_ingrediente int PRIMARY KEY AUTO_INCREMENT,
+nombre varchar(75) not null,
+descripcion varchar(200) not null,
+fecha_ingreso date not null,
+fecha_vencimiento date not null
+);
+
+CREATE TABLE pastel_ingrediente(
+id_pastel_ingrediente int PRIMARY KEY AUTO_INCREMENT,
+id_pastel int not null,
+id_ingrediente int not null
+);
+
+
+ALTER TABLE pastel_ingrediente ADD CONSTRAINT fk_pastel_md_ingrediente FOREIGN KEY (id_pastel) REFERENCES pastel(id_pastel) ON DELETE CASCADE;
+ALTER TABLE pastel_ingrediente ADD CONSTRAINT fk_ingrediente_md_pastel FOREIGN KEY (id_ingrediente) REFERENCES ingrediente(id_ingrediente) ON DELETE CASCADE;
